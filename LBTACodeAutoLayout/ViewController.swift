@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 //        setUpTopImageContainerView()
 //        setUpBearImageView()
 //        setUpDescriptionTextView()
-        setUpBottomControls()
+//        setUpBottomControls()
     }
     
 //    let topImageContainerView: UIView = {
@@ -50,40 +50,40 @@ class ViewController: UIViewController {
 //        return dtv
 //    }()
     
-    let previousButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("Prev".uppercased(), for: .normal)
-        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        btn.setTitleColor(UIColor(named: "pinkColor"), for: .normal)
-        return btn
-    }()
-    
-    let pageControl: UIPageControl = {
-        let pc = UIPageControl()
-        pc.translatesAutoresizingMaskIntoConstraints = false
-        pc.currentPage = 0
-        pc.numberOfPages = 4
-        pc.currentPageIndicatorTintColor = UIColor(named: "pinkColor")
-        pc.pageIndicatorTintColor = UIColor(named: "pinkColor")?.withAlphaComponent(0.3)
-        return pc
-    }()
-    
-    let nextButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("Next".uppercased(), for: .normal)
-        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        btn.setTitleColor(UIColor(named: "pinkColor"), for: .normal)
-        return btn
-    }()
-    
-    let bottomControlsStackView: UIStackView = {
-        let bcsv = UIStackView()
-        bcsv.translatesAutoresizingMaskIntoConstraints = false
-        bcsv.distribution = .fillEqually
-        return bcsv
-    }()
+//    let previousButton: UIButton = {
+//        let btn = UIButton(type: .system)
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.setTitle("Prev".uppercased(), for: .normal)
+//        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+//        btn.setTitleColor(UIColor(named: "pinkColor"), for: .normal)
+//        return btn
+//    }()
+//    
+//    let pageControl: UIPageControl = {
+//        let pc = UIPageControl()
+//        pc.translatesAutoresizingMaskIntoConstraints = false
+//        pc.currentPage = 0
+//        pc.numberOfPages = 4
+//        pc.currentPageIndicatorTintColor = UIColor(named: "pinkColor")
+//        pc.pageIndicatorTintColor = UIColor(named: "pinkColor")?.withAlphaComponent(0.3)
+//        return pc
+//    }()
+//    
+//    let nextButton: UIButton = {
+//        let btn = UIButton(type: .system)
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.setTitle("Next".uppercased(), for: .normal)
+//        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+//        btn.setTitleColor(UIColor(named: "pinkColor"), for: .normal)
+//        return btn
+//    }()
+//    
+//    let bottomControlsStackView: UIStackView = {
+//        let bcsv = UIStackView()
+//        bcsv.translatesAutoresizingMaskIntoConstraints = false
+//        bcsv.distribution = .fillEqually
+//        return bcsv
+//    }()
 
 //    fileprivate func setUpBearImageView() { //set ui component constraints
 //        view.backgroundColor = .white
@@ -110,16 +110,16 @@ class ViewController: UIViewController {
 //        topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
 //    }
     
-    fileprivate func setUpBottomControls() {
-        view.addSubview(bottomControlsStackView)
-        bottomControlsStackView.addArrangedSubview(previousButton)
-        bottomControlsStackView.addArrangedSubview(pageControl)
-        bottomControlsStackView.addArrangedSubview(nextButton)
-        bottomControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        bottomControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        bottomControlsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        bottomControlsStackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-    }
+//    fileprivate func setUpBottomControls() {
+//        view.addSubview(bottomControlsStackView)
+//        bottomControlsStackView.addArrangedSubview(previousButton)
+//        bottomControlsStackView.addArrangedSubview(pageControl)
+//        bottomControlsStackView.addArrangedSubview(nextButton)
+//        bottomControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+//        bottomControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+//        bottomControlsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+//        bottomControlsStackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//    }
 
 }
 
