@@ -9,6 +9,23 @@
 import UIKit
 
 class PageCell: UICollectionViewCell {
+    
+    var page: PageModel? {
+        didSet {
+            guard let unwrappedPage = page else { return }
+            bearImageView.image = UIImage(named: unwrappedPage.imageName)
+            
+            let attributedText = NSMutableAttributedString(string: unwrappedPage.headerText, attributes: [
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)
+            ])
+            attributedText.append(NSAttributedString(string: "\n\n\n" + unwrappedPage.bodyText, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.darkGray
+            ]))
+            
+            descriptionTextView.attributedText = attributedText
+            descriptionTextView.textAlignment = .center
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpTopImageContainerView()
@@ -20,29 +37,29 @@ class PageCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    let topImageContainerView: UIView = {
+    private let topImageContainerView: UIView = {
         let ticv = UIView()
         ticv.translatesAutoresizingMaskIntoConstraints = false
         return ticv
     }()
     
-    let bearImageView: UIImageView = { // create ui component
+    private let bearImageView: UIImageView = { // create ui component
         let iv = UIImageView(image: #imageLiteral(resourceName: "bear_first"))
         iv.translatesAutoresizingMaskIntoConstraints = false // enable auto layout on iv
         iv.contentMode = .scaleAspectFit
         return iv
     }()
     
-    let descriptionTextView: UITextView = {
+    private let descriptionTextView: UITextView = {
         let dtv = UITextView()
-        let attributedText = NSMutableAttributedString(string: "Join us today in our fun and games!", attributes: [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)
-        ])
-        attributedText.append(NSAttributedString(string: "\n\n\nAre you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our stores soon.", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.darkGray
-        ]))
+//        let attributedText = NSMutableAttributedString(string: "Join us today in our fun and games!", attributes: [
+//            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)
+//        ])
+//        attributedText.append(NSAttributedString(string: "\n\n\nAre you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our stores soon.", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.darkGray
+//        ]))
 
         dtv.translatesAutoresizingMaskIntoConstraints = false
-        dtv.attributedText = attributedText
+//        dtv.attributedText = attributedText
         dtv.textAlignment = .center
         dtv.isEditable = false
         dtv.isScrollEnabled = false

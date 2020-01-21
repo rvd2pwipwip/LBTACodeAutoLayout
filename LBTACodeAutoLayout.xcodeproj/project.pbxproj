@@ -13,6 +13,7 @@
 		D917C14B23CF2F27000E0429 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D917C14923CF2F27000E0429 /* LaunchScreen.storyboard */; };
 		D9F90E6723D67ADC0077FA31 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F90E6623D67ADC0077FA31 /* SwipingController.swift */; };
 		D9F90E6923D686230077FA31 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F90E6823D686230077FA31 /* PageCell.swift */; };
+		D9F90E6B23D71B480077FA31 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F90E6A23D71B480077FA31 /* PageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D917C14C23CF2F27000E0429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9F90E6623D67ADC0077FA31 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		D9F90E6823D686230077FA31 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		D9F90E6A23D71B480077FA31 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D917C14C23CF2F27000E0429 /* Info.plist */,
 				D9F90E6623D67ADC0077FA31 /* SwipingController.swift */,
 				D9F90E6823D686230077FA31 /* PageCell.swift */,
+				D9F90E6A23D71B480077FA31 /* PageModel.swift */,
 			);
 			path = LBTACodeAutoLayout;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D917C14323CF2F24000E0429 /* ViewController.swift in Sources */,
+				D9F90E6B23D71B480077FA31 /* PageModel.swift in Sources */,
 				D917C13F23CF2F24000E0429 /* AppDelegate.swift in Sources */,
 				D9F90E6923D686230077FA31 /* PageCell.swift in Sources */,
 				D9F90E6723D67ADC0077FA31 /* SwipingController.swift in Sources */,
