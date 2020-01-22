@@ -37,7 +37,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         return btn
     }()
     
-    private lazy var pageControl: UIPageControl = { // lazy var to access other class members?
+    lazy var pageControl: UIPageControl = { // lazy var to access other class members?
         let pc = UIPageControl()
         pc.translatesAutoresizingMaskIntoConstraints = false
         pc.currentPage = 0
@@ -80,34 +80,11 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         return bcsv
     }()
     
-    //set number of items in collection view
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pages.count
-    }
-    //set the cells
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! PageCell // casting UICollectionViewCell as PageCell
-//        cell.backgroundColor = indexPath.item % 2 == 0 ? .red : .green
-        let page = pages[indexPath.item]
-        cell.page = page
-        
-        return cell
-    }
-    
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let x = targetContentOffset.pointee.x
-//        print(x, view.frame.width, x / view.frame.width)
-        pageControl.currentPage = Int(x / view.frame.width)
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height)
-    }
+            let x = targetContentOffset.pointee.x
+    //        print(x, view.frame.width, x / view.frame.width)
+            pageControl.currentPage = Int(x / view.frame.width)
+        }
     
     fileprivate func setUpBottomControls() {
         view.addSubview(bottomControlsStackView)
